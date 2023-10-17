@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const onSubmit = (e) => {
-    e.preventDefault;
+    e.preventDefault();
   };
 
   return (
