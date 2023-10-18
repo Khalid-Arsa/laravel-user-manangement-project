@@ -4,7 +4,7 @@ import { useStateContext } from "../context/ContextProvider.jsx";
 import axiosClient from "../axios-client";
 
 function DefaultLayout() {
-  const { user, token, setUser, setToken } = useStateContext();
+  const { user, token, notification, setUser, setToken } = useStateContext();
 
   const onLogout = (e) => {
     e.preventDefault();
@@ -44,6 +44,7 @@ function DefaultLayout() {
         <main>
           <Outlet />
         </main>
+        {notification && <div className="notification">{notification}</div>}
       </div>
     </div>
   );
